@@ -49,26 +49,27 @@ const validateFormOnSubmit = () => {
   }
 
   let phone = form["telephone"].value;
-  console.log(phone);
   if (!phone.length || phone.match(/\d/g).length < 10) {
     Materialize.toast('Please enter your phone number with area code.', 4000, 'red');
     return false;
   }
 
   let address = form["address"].value;
-  console.log(phone);
   if (!address.length) {
     Materialize.toast('Please enter your full address.', 4000, 'red');
     return false;
   }
+
   form["submit"].classList.add('disabled');
-  Materialize.toast('Order submitted!', 4000, 'green',()=> {
+  Materialize.toast('Order submitted!', 4000, 'green'
+  , ()=> {
     subtotal = 0;
     ORDER_TABLE.innerHTML = "";
     updateTotal(0);
     form["submit"].classList.remove('disabled');
-  });
-
+  }
+  );
+  
   return true;
 }
 
