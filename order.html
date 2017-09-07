@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Order Page</title>
+  <link rel="stylesheet" href="./css/materialize.min.css">
+  <link rel="stylesheet" href="./css/master.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper blue darken-3" name="top">
+      <a href="./index.html" class="brand-logo left">Galvanize Delivers</a>
+      <ul id="nav-mobile" class="right">
+        <li><a href="#top">Order Delivery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="menu col s12 m8">
+        <h3>Menu</h3>
+        <div class="row">
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img src="./img/burger.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Royale with Cheese</span>
+                <p>$8.99</p>
+              </div>
+              <div class="card-action">
+                <a class="pink-text" href="javascript:;">Add to Order</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img src="./img/pizza.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Arugula Pie</span>
+                <p>$11.99</p>
+              </div>
+              <div class="card-action">
+                <a class="pink-text" href="javascript:;">Add to Order</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img src="./img/ribs.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Smoked Swine</span>
+                <p>$14.99</p>
+              </div>
+              <div class="card-action">
+                <a class="pink-text" href="javascript:;">Add to Order</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="card">
+              <div class="card-image">
+                <img src="./img/ice_cream.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Ice Cream Biscuit</span>
+                <p>$7.99</p>
+              </div>
+              <div class="card-action">
+                <a class="pink-text" href="javascript:;">Add to Order</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <h3>Order</h3>
+        <table class="striped" id="order-table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th class="right-align">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+        <table id="total-table">
+          <tbody class="right-align">
+            <tr>
+              <td>Subtotal</td>
+              <td id="subtotal">$0.00</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td id="tax-total">$0.00</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td id="total">$0.00</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="row">
+          <form name="order-data" class="col s12"
+          onsubmit="return validateFormOnSubmit(this);"
+          autocomplete="on">
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="Name" id="name" name="name" type="text" class="validate">
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input placeholder="###-###-####" id="telephone" name="telephone" type="tel" class="validate">
+                <label for="telephone">Phone Number</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea placeholder="Full Address Here" id="address" name="address" class="materialize-textarea validate"></textarea>
+                <label for="address">Address</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <button type="submit" name="submit" class="btn">Place Order</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer blue darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Galvanize Delivers</h5>
+          <p class="grey-text text-lighten-4">Fine Dining, Delivered.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="./index.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="#top">Order Delivery</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 Galvanize Delivers
+      </div>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="./js/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
+  <script type="text/javascript" src="./js/order.js"></script>
+</body>
+
+</html>
